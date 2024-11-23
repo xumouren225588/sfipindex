@@ -26,7 +26,11 @@ for key, value in data.items():
 # 写入README.md文件
 with open('README.md', 'w', encoding='utf-8') as md_file:
     # 写入Markdown表格头部
-    md_file.write('# 应用安装器索引\n')
+    md_file.write("""
+# 
+
+# 索引
+""")
     md_file.write('| 应用名称 | ID |\n')
     md_file.write('| --- | --- |\n')
     
