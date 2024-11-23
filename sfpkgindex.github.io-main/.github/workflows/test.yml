@@ -1,0 +1,36 @@
+name: Add JSON Key-Value to test.json and Push
+on:
+  workflow_dispatch:
+    inputs:
+      key:
+        description: 'JSON Key'
+        required: true
+        type: string
+      value:
+        description: 'JSON Value'
+        required: true
+        type: string
+jobs:
+  add_key_value:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Add key-value pair to JSON
+        run: |
+          KEY="${{ github.event.inputs.key }}"
+          VALUE="${{ github.event.inputs.value }}"
+          jq --arg k "$KEY" --arg v "$VALUE" '. + {($k): $v}' test.json > temp.json && mv temp.json test.json
+          python build.py
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "xumouren225588@163.com"
+          git config --local user.name "xumouren225588"
+          git add .
+          git commit -m "Add key-value pair to JSON in Index.html"
+          git push
