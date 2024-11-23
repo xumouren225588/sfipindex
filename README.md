@@ -10,3 +10,4 @@
 | kn | zh-cn |
 | km | mk |
 | kkk | bbb |
+| Python |  |
