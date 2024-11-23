@@ -29,7 +29,7 @@ with open('README.md', 'w', encoding='utf-8') as md_file:
     md_file.write("""
 # 应用一键快速部署工具
 # 使用方法：
-- 1、
+- 1、访问[软件部署选择工具]("")
 
 
 # 索引
