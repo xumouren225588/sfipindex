@@ -11,8 +11,8 @@ on:
         required: true
         type: string
 jobs:
-  randomcode:
-    runs-on: windows-latest
+  build:
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout specific branch
       uses: actions/checkout@v4
@@ -25,15 +25,14 @@ jobs:
     - name: build_number
       run: |
         python rc.py >> $GITHUB_ENV
-  build:
-    runs-on: ubuntu-latest
-    steps:
+  
     - name: Checkout specific branch
       uses: actions/checkout@v4
       with:
         ref: "${{ github.event.inputs.brh_name }}"
     - name: Create zip file
       run: |
+        echo ${{ env.RA_CO }}
         zip -r ${{ env.RA_CO }}.zip . -x '*.git*'
     - name: Upload
       uses: softprops/action-gh-release@v2
