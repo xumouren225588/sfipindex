@@ -1,0 +1,1 @@
+powershell Start-Process ".\setup.exe" -Verb RunAs
