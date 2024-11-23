@@ -46,6 +46,8 @@ html_template = f"""<!DOCTYPE html>
 </head>
 
 <body>
+    <h1>请选择您要部署的软件，然后按提交键</h1>
+    <a>下载安装配置后，请将里面的内容复制到</a>
     <form id="myForm">
 {checkbox_html}
         <input type="submit" value="提交">
