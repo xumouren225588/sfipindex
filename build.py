@@ -4,7 +4,7 @@ import json
 def generate_checkbox_html(json_data):
     checkbox_html = ""
     for key, value in json_data.items():
-        checkbox_html += f'        <input type="checkbox" id="{value}" value="{value}">{key}<br>'
+        checkbox_html += f'        <input type="checkbox" id="{value}" value="{value}">{key}<br>\n'
     return checkbox_html
 
 
