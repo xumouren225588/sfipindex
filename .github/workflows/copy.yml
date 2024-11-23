@@ -13,7 +13,7 @@ jobs:
         run: sudo apt install unzip
       - name: Commit and push changes
         run: |
-          unzip sfpkgindex.github.io-main.zip
+          unzip test.zip
           git config --local user.email "xumouren225588@163.com"
           git config --local user.name "xumouren225588"
           git add .
