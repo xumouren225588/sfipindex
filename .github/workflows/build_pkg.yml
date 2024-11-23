@@ -25,7 +25,9 @@ jobs:
     - name: build_number
       run: |
         python rc.py >> $GITHUB_ENV
-  
+    - name: Clean all checked out code 1
+      run: |
+        rm -rf "${{ github.workspace }}/*"
     - name: Checkout specific branch
       uses: actions/checkout@v4
       with:
@@ -40,7 +42,7 @@ jobs:
         files: |
           ${{ env.RA_CO }}.zip
         tag_name: index
-    - name: Clean all checked out code
+    - name: Clean all checked out code 2
       run: |
         rm -rf "${{ github.workspace }}/*"
     - name: Checkout specific branch
