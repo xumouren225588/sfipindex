@@ -1,7 +1,7 @@
 
 # 应用一键快速部署工具
 # 使用方法：
-- 1、访问[软件部署选择工具](https://xumouren225588.github.io/sfipindex "软件部署选择工具")
+- 1、访问[软件部署选择工具](config.sfipindex.infinityfreeapp.com "软件部署选择工具")
 - 2、选择好要部署的软件后，点击提交，然后用记事本打开下载下来的文件，复制里面的内容
 
 # 索引
@@ -11,3 +11,4 @@
 | pyinstalltest | tttlehtv |
 | bb | bs1djlqb |
 | 888 | 7kry30ls |
+| testy | n5cmwwpf |
