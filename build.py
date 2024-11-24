@@ -29,7 +29,7 @@ with open('README.md', 'w', encoding='utf-8') as md_file:
     md_file.write("""
 # 应用一键快速部署工具
 # 使用方法：
-- 1、访问[软件部署选择工具](https://xumouren225588.github.io/sfipindex "软件部署选择工具")
+- 1、访问[软件部署选择工具](config.sfipindex.infinityfreeapp.com "软件部署选择工具")
 - 2、选择好要部署的软件后，点击提交，然后用记事本打开下载下来的文件，复制里面的内容
 
 # 索引
@@ -49,7 +49,7 @@ html_template = f"""<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-height=1.0">
-    <title>Checkbox to JSON and Download</title>
+    <title>软件部署选择工具</title>
 </head>
 
 <body>
